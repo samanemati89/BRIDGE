@@ -61,9 +61,14 @@ Enable
 
 Save as: cat12_batch_template.mat
 
+### **1.5 Run CAT12 preprocessing**
 
+    scripts/run_cat12_batch.m
 
-
+This script:
+    Loads the subject list
+    Applies the saved batch template
+    Logs processing into cat12_run_log.txt
 
 
 
