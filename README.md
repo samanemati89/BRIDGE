@@ -133,3 +133,43 @@ BAG < 0 → decelerated brain aging
 The final output from this step is a table:
 
                                 Subject_ID | Age | Predicted_BrainAge | BAG
+
+# 5️⃣ Predicting BAG Using Behavioral Measures (Machine Learning)
+
+We used LASSO and stratified K-fold cross-validation to evaluate how well the behavioral data can predict BAG.
+
+### **5.1 Required inputs**
+
+                    BAG_table.xlsx
+
+                    Behavioral_scores.xlsx
+
+Each must contain Subject_ID for merging.
+
+### **5.2 Run ML pipeline**
+    python scripts/BAG_pred_kfoldCV.py
+
+### **5.3 What the script does**
+
+Uses 5-fold stratified CV (stratified by age)
+
+Predicts BAG from behavioral features
+
+Generates out-of-fold predictions (each subject predicted on unseen data)
+
+Computes:
+
+        R² MAE Pearson r
+
+📚 References
+
+CAT12 Toolbox:
+https://github.com/ChristianGaser/CAT12
+
+BrainAGE Framework:
+https://github.com/ChristianGaser/BrainAGE
+
+Gaser et al. (2013), Franke & Gaser (2019)
+
+SPM12:
+https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
