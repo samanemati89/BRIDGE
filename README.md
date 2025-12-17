@@ -100,6 +100,29 @@ BrainAGE requires:
 
 Use:
 ```bash
-    scripts/cat12_BrAge_tables.py
+scripts/cat12_BrAge_tables.py
 ```
 These files must be sorted in the same order as rp1/rp2 filenames.
+
+# 3️⃣ Feature Extraction (BA_data2mat)
+
+Using `BA_data2mat.m` script from the official CAT12/BrainAGE GitHub to 
+This step:
+
+    Reads rp1/rp2 maps
+    Applies smoothing and resampling (4mm / 8mm)
+    Produces .mat feature files (e.g., s8rp1_8mm_session1_CAT12.9.mat)
+
+These .mat files contain the matrix Y that BrainAGE uses for prediction.
+
+# 4️⃣ BrainAGE Prediction (GPR Model)
+
+Use the script `run_BA_gpr_ui.m` to estimate the brain age for each subject. 
+This script uses the BA_gpr.m from the BrainAGE toolbox.
+It loads the .mat feature files. Applies Gaussian Process Regression ensemble models. And outputs predicted brain age and BAG for each subject. 
+
+Brain Age Gap is calculated by:
+        
+                                BAG = Predicted Brain Age – Chronological Age
+
+
