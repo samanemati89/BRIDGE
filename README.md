@@ -77,5 +77,29 @@ ${ID}/mri/
 ${ID}/report/
 ${ID}/label/
 ```
+Confirm that rp1 (GM) and rp2 (WM) affine-registered maps are available for all subjects.
 
+#2️⃣ Organize CAT12 Outputs & Prepare BrainAGE Input Tables
 
+After preprocessing:
+
+### **2.1 Gather rp1/rp2 files**
+
+Use:
+```bash
+scripts/organize_cat12_output.sh
+```
+This organizes CAT12 output into two folders: rp1_CAT12.9/  and  rp2_CAT12.9/
+
+### **2.2 Create required tables for BrainAGE**
+
+BrainAGE requires:
+
+    ages.txt (age per subject, one value per line)
+    male.txt (optional sex coding)
+
+Use:
+```bash
+    scripts/cat12_BrAge_tables.py
+```
+These files must be sorted in the same order as rp1/rp2 filenames.
