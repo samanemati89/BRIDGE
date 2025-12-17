@@ -127,6 +127,7 @@ Brain Age Gap is calculated by:
 
 
 BAG > 0 → accelerated brian aging
+
 BAG < 0 → decelerated brain aging
 
 The final output from this step is a table:
