@@ -71,6 +71,11 @@ This script:
     Applies the saved batch template
     Logs processing into cat12_run_log.txt
 
-
+Inspect outputs for each subject:
+```bash
+${ID}/mri/
+${ID}/report/
+${ID}/label/
+```
 
 
