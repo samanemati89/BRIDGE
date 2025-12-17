@@ -40,8 +40,26 @@ head subj_list_paths.txt
 wc -l subj_list_paths.txt
 ```
 
+### **1.3 Configure CAT12 in MATLAB**
 
+addpath('/path/to/spm12');
+addpath('/path/to/spm12/toolbox/cat12');
 
+macOS users must do this to avoide security errors:
+```bash
+sudo xattr -r -d com.apple.quarantine "/path/to/spm/toolbox/cat12"
+```
+### **1.4 CAT12 batch template**
+
+You can use the cat12_batch_template.mat from this repository or use the CAT12 GUI to prepare a batch template:
+
+Enable
+
+    Gray matter → DARTEL export → Affine
+
+    White matter → DARTEL export → Affine
+
+Save as: cat12_batch_template.mat
 
 
 
