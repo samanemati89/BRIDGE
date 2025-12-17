@@ -32,6 +32,19 @@ From the directory containing all subject folders:
 
 ```bash
 find "$PWD" -maxdepth 2 -type f -name "T1_*.nii" | sort > subj_list_paths.txt
+'
+```
+Check:
+```bash
+head subj_list_paths.txt
+wc -l subj_list_paths.txt
+```
+
+
+
+
+
+
 
 
 
