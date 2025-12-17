@@ -168,7 +168,6 @@ https://github.com/ChristianGaser/CAT12
 
 BrainAGE Framework:
 https://github.com/ChristianGaser/BrainAGE
-
 Gaser et al. (2013), Franke & Gaser (2019)
 
 SPM12:
