@@ -79,7 +79,7 @@ ${ID}/label/
 ```
 Confirm that rp1 (GM) and rp2 (WM) affine-registered maps are available for all subjects.
 
-#2️⃣ Organize CAT12 Outputs & Prepare BrainAGE Input Tables
+# 2️⃣ Organize CAT12 Outputs & Prepare BrainAGE Input Tables
 
 After preprocessing:
 
@@ -126,3 +126,9 @@ Brain Age Gap is calculated by:
                                 BAG = Predicted Brain Age – Chronological Age
 
 
+BAG > 0 → accelerated brian aging
+BAG < 0 → decelerated brain aging
+
+The final output from this step is a table:
+
+                                Subject_ID | Age | Predicted_BrainAge | BAG
